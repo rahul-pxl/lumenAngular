@@ -2,7 +2,8 @@
 
 var articleApp = angular.module('articleApp', [
 	'ngRoute',
-	'articleAppController'
+	'articleAppController',
+	'articleServices',
 	]);
 
 console.log('in app.js: articleApp');
@@ -22,7 +23,7 @@ console.log('in app.js: routeProvider');
 			templateUrl: 'update',
 			controller: 'UpdateArticleCtrl'
 		}).
-		when('/:articleid',{
+		when('/article/:articleId',{
 			templateUrl: 'detail',
 			controller: 'ArticleDetailCtrl'
 		}).
